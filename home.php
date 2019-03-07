@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='pt-br'>
 <head>
-  <title>Bootstrap Example</title>
+  <title>Home Page Jean Lima</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -59,17 +59,28 @@
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-1 sidenav">
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
     </div>
     <div class="col-sm-10 text-left"> 
-      <h1>Jean Mário Moreira de Lima</h1>
-      <p>Engenheiro de Computação do Departamento de Engenharia de Computação e Automação da Universidade Federal do Rio Grande do Norte desde abril de 2017. Doutorando em Engenharia Elétrica e de Computação pelo Programa de Pós Graduação em Engenharia Elétrica e de Computação da Universidade Federal do Rio Grande do Norte, Mestre em Engenharia Mecatrônica (2018) pelo Programa de Pós Graduação em Engenharia Mecatrônica da Universidade Fderal do Rio Grande do Norte. É Engenheiro de Computação (2016) e Bacharel em Ciências e Tecnologia (2013), ambos pela Universidade Federal do Rio Grande do Norte. Também é Técnico em Automação Industrial (2015) pelo North Island College , Courtenay/BC, Canadá. Suas áreas de interesse são inteligência artificial, aprendizado de máquina e controle inteligente. </p>
+      <div class="row">
+        <div class='col-lg-3 col-md-1 col-sm-1'>
+          <div class='profile'>
+              <img src='img/jeanmario.png' alt='Jean Lima'>
+          </div>
+        </div>
+        <div class='col-lg-8 col-md-8 col-sm-8'>
+            <div class="name">
+              <p>Jean Mário Moreira de Lima</p>
+            </div>
+
+            <p>Engenheiro de Computação do Departamento de Engenharia de Computação e Automação da Universidade Federal do Rio Grande do Norte desde abril de 2017. Doutorando em Engenharia Elétrica e de Computação pelo Programa de Pós Graduação em Engenharia Elétrica e de Computação da Universidade Federal do Rio Grande do Norte, Mestre em Engenharia Mecatrônica (2018) pelo Programa de Pós Graduação em Engenharia Mecatrônica da Universidade Fderal do Rio Grande do Norte. É Engenheiro de Computação (2016) e Bacharel em Ciências e Tecnologia (2013), ambos pela Universidade Federal do Rio Grande do Norte. Também é Técnico em Automação Industrial (2015) pelo North Island College , Courtenay/BC, Canadá. Suas áreas de interesse são inteligência artificial, aprendizado de máquina e controle inteligente. </p>
+
       <hr>
       <h3>Produções</h3>
       <p>Em construção...</p>
+      </div>
     </div>
+    </div>
+  </div>
     <div class="col-sm-1 sidenav">
       
     </div>
