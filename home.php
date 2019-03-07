@@ -62,17 +62,17 @@
     </div>
     <div class="col-sm-10 text-left"> 
       <div class="row">
-        <div class='col-lg-3 col-md-1 col-sm-1'>
           <div class='profile'>
               <img src='img/jeanmario.png' alt='Jean Lima'>
           </div>
-        </div>
         <div class='col-lg-8 col-md-8 col-sm-8'>
             <div class="name">
               <p>Jean Mário Moreira de Lima</p>
             </div>
 
-            <p>Engenheiro de Computação do Departamento de Engenharia de Computação e Automação da Universidade Federal do Rio Grande do Norte desde abril de 2017. Doutorando em Engenharia Elétrica e de Computação pelo Programa de Pós Graduação em Engenharia Elétrica e de Computação da Universidade Federal do Rio Grande do Norte, Mestre em Engenharia Mecatrônica (2018) pelo Programa de Pós Graduação em Engenharia Mecatrônica da Universidade Fderal do Rio Grande do Norte. É Engenheiro de Computação (2016) e Bacharel em Ciências e Tecnologia (2013), ambos pela Universidade Federal do Rio Grande do Norte. Também é Técnico em Automação Industrial (2015) pelo North Island College , Courtenay/BC, Canadá. Suas áreas de interesse são inteligência artificial, aprendizado de máquina e controle inteligente. </p>
+            <div class="description">
+              <p>Engenheiro de Computação do Departamento de Engenharia de Computação e Automação da Universidade Federal do Rio Grande do Norte desde abril de 2017. Doutorando em Engenharia Elétrica e de Computação pelo Programa de Pós Graduação em Engenharia Elétrica e de Computação da Universidade Federal do Rio Grande do Norte, Mestre em Engenharia Mecatrônica (2018) pelo Programa de Pós Graduação em Engenharia Mecatrônica da Universidade Fderal do Rio Grande do Norte. É Engenheiro de Computação (2016) e Bacharel em Ciências e Tecnologia (2013), ambos pela Universidade Federal do Rio Grande do Norte. Também é Técnico em Automação Industrial (2015) pelo North Island College , Courtenay/BC, Canadá. Suas áreas de interesse são inteligência artificial, aprendizado de máquina e controle inteligente. </p>
+             </div> 
 
       <hr>
       <h3>Produções</h3>
@@ -82,7 +82,7 @@
     </div>
   </div>
     <div class="col-sm-1 sidenav">
-      
+  
     </div>
   </div>
 </div>
