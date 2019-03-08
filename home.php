@@ -50,10 +50,11 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#">Home</a></li>
+          <!-- <li class="active"><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Projects</a></li>
           <li><a href="#">Contact</a></li>
+        -->
         </ul>
         <ul class="nav navbar-nav navbar-right">
 
@@ -78,7 +79,7 @@
               </div>
 
               <div class="description">
-                <p>Engenheiro de Computação do Departamento de Engenharia de Computação e Automação da Universidade Federal do Rio Grande do Norte desde abril de 2017. Doutorando em Engenharia Elétrica e de Computação pelo Programa de Pós Graduação em Engenharia Elétrica e de Computação da Universidade Federal do Rio Grande do Norte, Mestre em Engenharia Mecatrônica (2018) pelo Programa de Pós Graduação em Engenharia Mecatrônica da Universidade Fderal do Rio Grande do Norte. É Engenheiro de Computação (2016) e Bacharel em Ciências e Tecnologia (2013), ambos pela Universidade Federal do Rio Grande do Norte. Também é Técnico em Automação Industrial (2015) pelo North Island College , Courtenay/BC, Canadá. Suas áreas de interesse são inteligência artificial, aprendizado de máquina e controle inteligente. </p>
+                <p>Engenheiro de Computação do Departamento de Engenharia de Computação e Automação da Universidade Federal do Rio Grande do Norte desde abril de 2017. Doutorando em Engenharia Elétrica e de Computação pelo Programa de Pós Graduação em Engenharia Elétrica e de Computação da Universidade Federal do Rio Grande do Norte, Mestre em Engenharia Mecatrônica (2018) pelo Programa de Pós Graduação em Engenharia Mecatrônica da Universidade Fderal do Rio Grande do Norte. É Engenheiro de Computação (2016) e Bacharel em Ciências e Tecnologia (2013), ambos pela Universidade Federal do Rio Grande do Norte. Também é Técnico em Automação Industrial (2015) pelo North Island College, Courtenay/BC, Canadá. Suas áreas de interesse são inteligência artificial, aprendizado de máquina e controle inteligente. </p>
                </div> 
 
 
