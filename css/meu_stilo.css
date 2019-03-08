@@ -74,6 +74,34 @@
   padding-top: 5px;
 }
 
+/*
+########################### 
+#### PRODUCOES ACADEMICAS
+##
+*/
+
+#academic-prod {
+  float: left;
+  display: inline;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+}
+
+.text {
+  font-family: 'Lato', sans-serif;
+  color: #444;
+  float: left;
+  width: 100%;
+}
+
+.text > h3 {
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 
     
     /* Set black background color, white text and some padding */
