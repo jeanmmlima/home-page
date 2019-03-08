@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang='pt-br'>
 <head>
-  <title>Home Page Jean Lima</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Title -->
+  <title>Página pessoal de Jean Mário Moreira de Lima</title>
+
+  <!-- Favicon -->
+  <link rel='shortcut icon' type='image/gif' href='img/DCAicon.gif'>
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -74,7 +80,7 @@
               <div class="description">
                 <p>Engenheiro de Computação do Departamento de Engenharia de Computação e Automação da Universidade Federal do Rio Grande do Norte desde abril de 2017. Doutorando em Engenharia Elétrica e de Computação pelo Programa de Pós Graduação em Engenharia Elétrica e de Computação da Universidade Federal do Rio Grande do Norte, Mestre em Engenharia Mecatrônica (2018) pelo Programa de Pós Graduação em Engenharia Mecatrônica da Universidade Fderal do Rio Grande do Norte. É Engenheiro de Computação (2016) e Bacharel em Ciências e Tecnologia (2013), ambos pela Universidade Federal do Rio Grande do Norte. Também é Técnico em Automação Industrial (2015) pelo North Island College , Courtenay/BC, Canadá. Suas áreas de interesse são inteligência artificial, aprendizado de máquina e controle inteligente. </p>
                </div> 
-            </div>
+
 
         <hr>
         <br><br><br>
@@ -84,26 +90,76 @@
         -->
 
         <!-- 
-      # SOBRE O DCA
+      # PRODICOES ACADEMICAS
     --> 
     <section id='academic-prod'>
         <div class='row'>
-          <div class='col-lg-12 col-md-12'>
             <div class='text'>
              <h3 >Produções Acadêmicas</h3>
              <ul>
-                <li>Sistemas de Controle</li>
-                <li>Introdução a Robótica</li>
+
+                  <li>Introdução a Robótica</li>
+                  <ul>
+                    <li> Apostila para utilização do braço robótico AL5D v2.0:
+                      <a href="apostila_al5dv2.pdf"> Apostila_al5dv2.pdf </a>
+                    </li>
+                    <li> Driver na liguagem C para utilização do braço robótico AL5D v2.0:
+                      <a href="drivers/demo_lynxC.tar.gz"> demo_lynxC.tar.gz </a>
+                    </li>
+                    <li> Driver na linguagem Python para utilização braço robótico AL5D v2.0:
+                      <a href="drivers/demo_lynxPy.tar.gz"> demo_lynxPy.tar.gz </a>
+                    </li>
+                  </ul>
+
                 <li>Processamento Digital de Sinais</li>
+                  <ul>
+                    <li> Apostila para utilização das Placas DSP e Code Composer no Windows 10:
+                      <a href="ApostilaDSP.pdf"> ApostilaDSP.pdf </a>
+                    </li>
+                    <li> Programa de demonstração para utilização da DSP:
+                      <a href="files/main.c"> blink_led.c </a>
+                    </li>
+                    <li> Manual de utilização da placa DSP: 
+                      <a href="files/Manual_DSP.pdf"> Manual_DSP.pdf </a>
+                    </li>
+                    <li> Arquivos auxiliares do DSP Starter Kit: 
+                      <a href="files/DSP_Starter_Kit.zip"> DSP_Starter_Kit.zip </a>
+                    </li>
+                  </ul>
+
+                <li>Sistemas de Controle</li>
+                <ul>
+                    <li> Simulação base para utilização dos tanques acoplados Quanser:
+                      <a href="coupled_tanks.zip"> coupled_tanks.zip </a>
+                    </li>
+                </ul>
+
              </ul>
            </div>
               
+        </div>
+    </section>
+
+        <!-- 
+      # CONTATO
+    --> 
+    <section id='academic-prod'>
+        <div class='row'>
+            <div class='text'>
+             <h3 >Contato</h3>
+             <p>UFRN-CT-DCA</p>
+             <p>email: jean@dca.ufrn.br</p>
+             <p>telefone: +55 84 3342-2231 (222)</p>
+             <p>github: jeanmmlima</p>
+            
+           </div>
               
-          </div>
         </div>
     </section>
 
 
+
+    </div>
 
 
       </div>
