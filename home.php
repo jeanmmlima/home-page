@@ -115,16 +115,16 @@
                 <li>Processamento Digital de Sinais</li>
                   <ul>
                     <li> Apostila para utilização das Placas DSP e Code Composer no Windows 10:
-                      <a href="ApostilaDSP.pdf"> ApostilaDSP.pdf </a>
+                      <a href="pds/ApostilaDSP.pdf"> ApostilaDSP.pdf </a>
                     </li>
                     <li> Programa de demonstração para utilização da DSP:
-                      <a href="files/main.c"> blink_led.c </a>
+                      <a href="pds/main.c"> blink_led.c </a>
                     </li>
                     <li> Manual de utilização da placa DSP: 
-                      <a href="files/Manual_DSP.pdf"> Manual_DSP.pdf </a>
+                      <a href="pds/Manual_DSP.pdf"> Manual_DSP.pdf </a>
                     </li>
                     <li> Arquivos auxiliares do DSP Starter Kit: 
-                      <a href="files/DSP_Starter_Kit.zip"> DSP_Starter_Kit.zip </a>
+                      <a href="pds/DSP_Starter_Kit.zip"> DSP_Starter_Kit.zip </a>
                     </li>
                   </ul>
 
