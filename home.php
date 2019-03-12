@@ -14,6 +14,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/  font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -156,10 +157,15 @@
               <i class="fa fa-bank"></i>  UFRN-CT-DCA
              </span><br>
              <span>
-              <i class="fa fa-envelope"></i>  jean@dca.ufrn.br
-            </span><br>
-             <p>telefone: +55 84 3342-2231 (222)</p>
-             <p>github: jeanmmlima</p>
+              <i class="fa fa-envelope"></i>  <a href="mailto:jean@dca.ufrn.br">jean@dca.ufrn.br</a>
+             </span><br>
+             <span>
+              <i class="fa fa-phone"></i>  +55 84 3342-2231 (222)
+             </span><br>
+             <span>
+               <i class="fab fa-github"></i>  <a href="http://github.com/jeanmmlima">jeanmmlima </a>
+             </span>
+             
             
            </div>
               
@@ -197,7 +203,6 @@
               <address class='contact-info'>
                 <p><span class='fa fa-map-marker'></span>UFRN Campus Universitário Lagoa Nova - 59078-970 - Natal/RN - BRASIL</p>
                 <p><span class='fa fa-phone'></span>+55 (84) 3342-2231 (ext 220 ou 200)</p>
-                <p><span class='fa fa-envelope-o'></span><?php echo hide_email('secretaria@dca.ufrn.br',0); ?></p>
               </address>
             </div>
           </div>

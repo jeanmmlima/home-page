@@ -137,12 +137,13 @@
   color: #444;
   float: left;
   width: 100%;
+  font-size: 20px
 }
 
 .span > i{
   margin-right:100px;
   padding-right: 100px;
-  font-style: 18px;
+  font-style: 20px;
 }
 
 
