@@ -104,7 +104,7 @@
              <h3 >Produções Acadêmicas</h3>
              <ul>
 
-                  <li>Introdução a Robótica</li>
+                  <li><p>Introdução a Robótica</p></li>
                   <ul>
                     <li> Apostila para utilização do braço robótico AL5D v2.0:
                       <a href="apostila_al5dv2.pdf"> Apostila_al5dv2.pdf </a>
@@ -116,8 +116,8 @@
                       <a href="drivers/demo_lynxPy.tar.gz"> demo_lynxPy.tar.gz </a>
                     </li>
                   </ul>
-
-                <li>Processamento Digital de Sinais</li>
+                  <br>
+                <li><p>Processamento Digital de Sinais</p></li>
                   <ul>
                     <li> Apostila para utilização das Placas DSP e Code Composer no Windows 10:
                       <a href="pds/ApostilaDSP.pdf"> ApostilaDSP.pdf </a>
@@ -132,8 +132,8 @@
                       <a href="pds/DSP_Starter_Kit.zip"> DSP_Starter_Kit.zip </a>
                     </li>
                   </ul>
-
-                <li>Sistemas de Controle</li>
+                  <br>
+                <li><p>Sistemas de Controle</p></li>
                 <ul>
                     <li> Simulação base para utilização dos tanques acoplados Quanser:
                       <a href="coupled_tanks.zip"> coupled_tanks.zip </a>
@@ -145,14 +145,14 @@
               
         </div>
     </section>
-
         <!-- 
       # CONTATO
     --> 
     <section id='contact'>
         <div class='row'>
             <div class='text'>
-             <h3 >Contato</h3>
+              <h3 >Contato</h3>
+             
              <span>
               <i class="fa fa-bank"></i>  UFRN-CT-DCA
              </span><br>
