@@ -116,7 +116,7 @@
                       <a href="drivers/demo_lynxPy.tar.gz"> demo_lynxPy.tar.gz </a>
                     </li>
                     <li> Simulador baseado no V-REP para o braço robótico AL5D v2.0:
-                      <a href="simulators/AL5D-LYNX-Simualtor-master.zip"> AL5D-LYNX-Simulator-master.zip </a>
+                      <a href="simulators/AL5D-LYNX-Simulator-master.zip"> AL5D-LYNX-Simulator-master.zip </a>
                     </li>
                   </ul>
                   <br>
