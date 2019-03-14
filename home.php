@@ -4,6 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    
+  <!-- Metadata: site definitions -->
+  <meta name='url' content='http://www.dca.ufrn.br/~jean/'>
+  <meta name='copyright' content='© 2019 DCA-UFRN: www.dca.ufrn.br/~jean<http://www.dca.ufrn.br/~jean/>'>
+  <meta name='description' content='Página Pessoal de Jean Mário Moreira de Lima, Engenheiro do Departamento de Engenharia de Computação e Automção (DCA) da Universidade Federal do Rio Grande do Norte (UFRN).'>
+  <meta name='author' content='Eng. Jean Mário Moreira de Lima'>
+    
+    <!-- Metadata: search bots -->
+  <meta name='Robots' content='Index,Follow'>
+  <meta name='rating' content='general'>
+  <meta name='keywords' content='dca, departamento de engenharia de computação e automação, ufrn, universidade federal do rio grande do norte, engenharia de computação, engenharia mecatrônica, automação, petróleo, robótica, controle de processos, sistemas distribuídos, sistemas inteligentes, sistemas de controle'>
+
   <!-- Title -->
   <title>Página pessoal de Jean Mário Moreira de Lima</title>
 
