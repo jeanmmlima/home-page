@@ -88,12 +88,50 @@
       <div class="col-sm-10 text-left"> 
         <div class="row">
             <div class='profile'>
-                
+
+
+
             </div>
           <div class='col-lg-8 col-md-8 col-sm-8'>
               
 
+             <?php 
+                    $servername = "localhost";
+                    $username = "user";
+                    $password = "#Senha123#";
+                    $dbname = "teste";
+                    $count = 0;
 
+                    // Create connection
+                    $conn = new mysqli($servername, $username, $password, $dbname);
+
+                    // Check connection
+                    if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                    }
+                    echo "Connected successfully to $dbname database <br>";
+
+                    $sql = "SELECT * FROM grupo";
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0) {
+                      echo"<table>";
+                      // output data of each row
+                       while($row = $result->fetch_assoc()) {
+                            echo "<tr>";
+                          
+                            echo "<td>" . $row["id"] . "- - -" . $row["descricao"] . " </td>";
+
+                        } 
+                      echo "</table>";
+                    } else {
+                      echo "0 results";
+                    }
+                    
+
+                    $conn->close();
+
+              ?>
 
 
     </div>
