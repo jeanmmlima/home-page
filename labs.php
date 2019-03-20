@@ -93,7 +93,19 @@
 
             </div>
           <div class='col-lg-8 col-md-8 col-sm-8'>
-              
+
+           
+             <?php 
+
+              function addgrupo($id_grupo,$descricao_grupo, $descricao_turma) {
+                  echo "<option value=\"" . $id_grupo . "\">" . $descricao_grupo . " - " . $descricao_turma . "</option>";
+              }
+
+              function addhorario($id_horario,$descricao_horario){
+                  echo "<option value=\"" . $id_horario . "\">" . $descricao_horario . "</option>";
+              }
+
+             ?>
 
              <?php 
                     $servername = "localhost";
@@ -110,26 +122,52 @@
                         die("Connection failed: " . $conn->connect_error);
                     }
                     echo "Connected successfully to $dbname database <br>";
+                    echo "<form> \r\n";
 
                     $sql = "SELECT * FROM grupo";
+
                     $result = $conn->query($sql);
+                    
 
                     if ($result->num_rows > 0) {
-                      echo"<table>";
                       // output data of each row
-                       while($row = $result->fetch_assoc()) {
-                            echo "<tr>";
-                          
-                            echo "<td>" . $row["id"] . "- - -" . $row["descricao"] . " </td>";
+                      
+                      echo "\t\t\tGrupo: <select name=\"grupo\">\r\n";
+                      while($row = $result->fetch_assoc()) {  
+                        
+                      addgrupo($row["id"],$row["descricao"],$row["descricao"]);
 
-                        } 
-                      echo "</table>";
+                      } 
+                      echo "\t\t\t</select>\r\n";
+                      
                     } else {
                       echo "0 results";
                     }
+
+                    $sql = "SELECT * FROM horarios";
+
+                    $result = $conn->query($sql);
                     
 
+                    if ($result->num_rows > 0) {
+                      // output data of each row
+                      
+                      echo "\t\t\t Horário: <select name=\"horarios\">\r\n";
+                      while($row = $result->fetch_assoc()) {  
+                        
+                      addhorario($row["id"],$row["descricao"]);
+
+                      } 
+                      echo "\t\t\t</select>\r\n";
+                      
+                    } else {
+                      echo "0 results";
+                    }
+
                     $conn->close();
+                    echo"<br>Data: <input type=\"date\" name=\"bday\">";
+                    echo "<br><input type=\"submit\" value=\"Confirmar\">";
+                    echo "</form>\r\n";
 
               ?>
 
