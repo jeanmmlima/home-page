@@ -105,7 +105,51 @@
                   echo "<option value=\"" . $id_horario . "\">" . $descricao_horario . "</option>";
               }
 
+              function pegouvalor(){
+                echo "<br><p> " . $_POST["grupo"] . "</p>";
+              }
+
+
+
              ?>
+
+             <?php
+              // define variables and set to empty values
+              $grupoErr = $horariosErr = $dataErr = "";
+              $grupo = $horarios = $data = "";
+
+              if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                if (empty($_POST["grupo"])) {
+                  $grupoErr = "Grupo is required";
+                } else {
+                  $grupo = test_input($_POST["grupo"]);
+                }
+                
+                if (empty($_POST["horarios"])) {
+                  $horariosErr = "Horario is required";
+                } else {
+                  $horarios = test_input($_POST["horarios"]);
+                  
+                }
+                  
+                if (empty($_POST["data"])) {
+                  $data = "";
+                } else {
+                  $data = test_input($_POST["data"]);
+                  
+                }
+
+              }
+
+              function test_input($data) {
+                $data = trim($data);
+                $data = stripslashes($data);
+                $data = htmlspecialchars($data);
+                return $data;
+              }
+            ?>
+
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
              <?php 
                     $servername = "localhost";
@@ -122,7 +166,7 @@
                         die("Connection failed: " . $conn->connect_error);
                     }
                     echo "Connected successfully to $dbname database <br>";
-                    echo "<form> \r\n";
+                    
 
                     $sql = "SELECT * FROM grupo";
 
@@ -165,10 +209,20 @@
                     }
 
                     $conn->close();
-                    echo"<br>Data: <input type=\"date\" name=\"bday\">";
+                    echo"<br>Data: <input type=\"date\" name=\"data\">";
                     echo "<br><input type=\"submit\" value=\"Confirmar\">";
                     echo "</form>\r\n";
 
+              ?>
+
+              <?php
+                echo "<br><h2>Entradas:</h2><br>";
+                echo $grupo;
+                echo "<br>";
+                echo $horarios;
+                echo "<br>";
+                echo $data;
+                echo "<br>";
               ?>
 
 
