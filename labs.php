@@ -109,6 +109,40 @@
                 echo "<br><p> " . $_POST["grupo"] . "</p>";
               }
 
+              function bdConnect(){
+
+                    $servername = "localhost";
+                    $username = "user";
+                    $password = "#Senha123#";
+                    $dbname = "teste";
+                    $count = 0;
+
+                    // Create connection
+                    $conn = new mysqli($servername, $username, $password, $dbname);
+
+                    // Check connection
+                    if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                    }
+                    echo "<br> Connected successfully to $dbname database <br>";
+                    return $conn;
+              }
+
+              function insertReserva($grupo,$horarios,$data){
+                //insert into database
+
+                $conn = bdConnect();
+                $sql = "INSERT INTO reserva (id_grupo,id_horarios,ativo,data) VALUES (" . $grupo . ", " . $horarios . ", 1, '" . $data . "')";
+
+                if ($conn->query($sql) === TRUE) {
+                    echo "<br>New record created successfully<br>";
+                } else {
+                    echo "<br>Error: " . $sql . "<br>" . $conn->error;
+                }
+
+                $conn->close();
+              }
+
 
 
              ?>
@@ -139,7 +173,10 @@
                   
                 }
 
+                insertReserva($grupo,$horarios,$data);
+
               }
+
 
               function test_input($data) {
                 $data = trim($data);
@@ -152,21 +189,8 @@
             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
              <?php 
-                    $servername = "localhost";
-                    $username = "user";
-                    $password = "#Senha123#";
-                    $dbname = "teste";
-                    $count = 0;
-
-                    // Create connection
-                    $conn = new mysqli($servername, $username, $password, $dbname);
-
-                    // Check connection
-                    if ($conn->connect_error) {
-                        die("Connection failed: " . $conn->connect_error);
-                    }
-                    echo "Connected successfully to $dbname database <br>";
                     
+                    $conn = bdConnect();
 
                     $sql = "SELECT * FROM grupo";
 
@@ -223,6 +247,9 @@
                 echo "<br>";
                 echo $data;
                 echo "<br>";
+
+
+
               ?>
 
 
