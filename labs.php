@@ -201,7 +201,8 @@
                     if ($result->num_rows > 0) {
                       // output data of each row
                       
-                      echo "\t\t\tGrupo: <select name=\"grupo\">\r\n";
+                      echo "\t\t\tGrupo:<br> <select name=\"grupo\">\r\n";
+                      echo "<option value=\"\" disabled selected>Escolha o grupo</option>";
                       while($row = $result->fetch_assoc()) {  
                         
                       addgrupo($row["ID"],$row["GRUPO"],$row["TURMA"]);
@@ -221,7 +222,8 @@
                     if ($result->num_rows > 0) {
                       // output data of each row
                       
-                      echo "\t\t\t Horário: <select name=\"horarios\">\r\n";
+                      echo "\t\t\t <br>Horário:<br> <select name=\"horarios\">\r\n";
+                      echo "<option value=\"\" disabled selected>Escolha o horário</option>";
                       while($row = $result->fetch_assoc()) {  
                         
                       addhorario($row["id"],$row["descricao"]);
@@ -236,12 +238,13 @@
                     $conn->close();
                     echo"<br>Data:<br> <input type=\"date\" name=\"data\"><br>";
                     echo "<br><input type=\"submit\" value=\"Confirmar\">";
+                    echo "<input type=\"reset\" value=\"Cancelar\">";
                     echo "</form>\r\n";
 
               ?>
 
               <?php
-                echo "<br><h2>Entradas:</h2><br>";
+                echo "<br><br>";
                 echo $grupo;
                 echo "<br>";
                 echo $horarios;
