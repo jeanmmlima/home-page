@@ -234,7 +234,7 @@
                     }
 
                     $conn->close();
-                    echo"<br>Data: <input type=\"date\" name=\"data\">";
+                    echo"<br>Data:<br> <input type=\"date\" name=\"data\"><br>";
                     echo "<br><input type=\"submit\" value=\"Confirmar\">";
                     echo "</form>\r\n";
 
