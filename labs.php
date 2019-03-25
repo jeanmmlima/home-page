@@ -192,7 +192,8 @@
                     
                     $conn = bdConnect();
 
-                    $sql = "SELECT * FROM grupo";
+                    $sql = "SELECT g.id as ID, g.descricao AS GRUPO, t.descricao AS TURMA FROM grupo g INNER JOIN turma t ON g.id_turma = t.id";
+
 
                     $result = $conn->query($sql);
                     
@@ -203,7 +204,7 @@
                       echo "\t\t\tGrupo: <select name=\"grupo\">\r\n";
                       while($row = $result->fetch_assoc()) {  
                         
-                      addgrupo($row["id"],$row["descricao"],$row["descricao"]);
+                      addgrupo($row["ID"],$row["GRUPO"],$row["TURMA"]);
 
                       } 
                       echo "\t\t\t</select>\r\n";
