@@ -257,6 +257,44 @@
               ?>
 
 
+            <div class="row">
+              <div class="column" style="background-color:#aaa;">
+                <p>SEGUNDA</p>
+              </div>
+              <div class="column" style="background-color:#bbb;">
+                <p>TERÇA</p>
+              </div>
+              <div class="column" style="background-color:#aaa;">
+                <p>QUARTA</p>
+              </div>
+              <div class="column" style="background-color:#bbb;">
+                <p>QUINTA</p>
+              </div>
+              <div class="column" style="background-color:#aaa;">
+                <p>SEXTA</p>
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="column" style="background-color:#ccc;">
+                <p>Some text..</p>
+              </div>
+              <div class="column" style="background-color:#ddd;">
+                <p>Some text..</p>
+              </div>
+              <div class="column" style="background-color:#ccc;">
+                <p>Some text..</p>
+              </div>
+              <div class="column" style="background-color:#ddd;">
+                <p>Some text..</p>
+              </div>
+               <div class="column" style="background-color:#ccc;">
+                <p>Some text..</p>
+              </div>
+            </div>
+
+
     </div>
 
 
