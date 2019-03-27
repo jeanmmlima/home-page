@@ -104,6 +104,9 @@
               function addhorario($id_horario,$descricao_horario){
                   echo "<option value=\"" . $id_horario . "\">" . $descricao_horario . "</option>";
               }
+              function showReserva($grupo,$turma,$horario,$data){
+                echo "<p> Data: " . $data . " - " . $grupo . " - " . $turma . " - " . $horario . "</p>";
+              }
 
               function pegouvalor(){
                 echo "<br><p> " . $_POST["grupo"] . "</p>";
@@ -141,6 +144,31 @@
                 }
 
                 $conn->close();
+              }
+
+              function getReservas(){
+
+                $conn = bdConnect();
+
+                $sql = "SELECT g.descricao AS GRUPO, t.descricao as TURMA, h.descricao as HORARIO, r.data as DATA from reserva r inner join grupo g on (r.id_grupo = g.id) inner join horarios h on (r.id_horarios = h.id) inner join turma t on (g.id_turma = t.id) order by data asc, HORARIO asc";
+
+                $result = $conn->query($sql);
+                    
+
+                if ($result->num_rows > 0) {
+                      // output data of each row
+
+                  while($row = $result->fetch_assoc()) {  
+                        
+                    showReserva($row["GRUPO"],$row["TURMA"],$row["HORARIO"],$row["DATA"]);
+
+                  } 
+                      
+                } 
+                else {
+                      echo "0 results";
+                }
+
               }
 
 
@@ -252,11 +280,13 @@
                 echo $data;
                 echo "<br>";
 
+                getReservas();
 
 
               ?>
 
 
+            <h3> Horários Marcados </h3>  
             <div class="row">
               <div class="column" style="background-color:#aaa;">
                 <p>SEGUNDA</p>
