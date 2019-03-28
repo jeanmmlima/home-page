@@ -298,13 +298,13 @@
             <?php
                 echo "\n<div class=\"row\">\n";
                 echo "\t\t\t\t  <div class=\"column\" style=\"background-color:#aaa;\">\n";
-                echo "\t\t\t\t <p> DATA </p>\n";
+                echo "\t\t\t\t <p style=\"font-weight: bold\";> DATA </p>\n";
                 echo "\t\t\t\t  </div>\n";
                 echo "\t\t\t\t  <div class=\"column\" style=\"background-color:#bbb;\">\n";
-                echo "\t\t\t\t <p> GRUPO </p>\n";
+                echo "\t\t\t\t <p style=\"font-weight: bold\"> GRUPO </p>\n";
                 echo "\t\t\t\t  </div>\n";
                  echo "\t\t\t\t  <div class=\"column\" style=\"background-color:#ccc;\">\n";
-                echo "\t\t\t\t <p> HORÁRIO </p>\n";
+                echo "\t\t\t\t <p style=\"font-weight: bold\"> HORÁRIO </p>\n";
                 echo "\t\t\t\t  </div>\n";
 
                 echo " </div>\n";

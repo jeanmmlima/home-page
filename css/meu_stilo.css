@@ -366,6 +366,7 @@ input::-webkit-datetime-edit-fields-wrapper {
   margin-bottom: 1px;
   margin-top: 2px;
   font-size: 14px;
+  text-align: center;
 }
 /* Clear floats after the columns */
 .row:after {
