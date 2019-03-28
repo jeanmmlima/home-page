@@ -98,11 +98,11 @@
              <?php 
 
               function addgrupo($id_grupo,$descricao_grupo, $descricao_turma) {
-                  echo "<option value=\"" . $id_grupo . "\">" . $descricao_grupo . " - " . $descricao_turma . "</option>";
+                  echo "\t\t\t\t\t<option value=\"" . $id_grupo . "\">" . $descricao_grupo . " - " . $descricao_turma . "</option>\n";
               }
 
               function addhorario($id_horario,$descricao_horario){
-                  echo "<option value=\"" . $id_horario . "\">" . $descricao_horario . "</option>";
+                  echo "\t\t\t\t\t<option value=\"" . $id_horario . "\">" . $descricao_horario . "</option>\n";
               }
               function showReserva($grupo,$turma,$horario,$data){
                 
@@ -111,7 +111,7 @@
               echo "\t\t\t\t <p> ". date('d/m/Y',strtotime($data)) ." </p>\n";
               echo "\t\t\t\t  </div>\n";
               echo "\t\t\t\t  <div class=\"column\" style=\"background-color:#bbb;\">\n";
-              echo "\t\t\t\t <p> " . $grupo . "</p>\n";
+              echo "\t\t\t\t <p> " . $grupo . " - " . $turma . ". </p>\n";
               echo "\t\t\t\t  </div>\n";
               echo "\t\t\t\t  <div class=\"column\" style=\"background-color:#ccc;\">\n";
               echo "\t\t\t\t <p> " . $horario . "</p>\n";
@@ -226,7 +226,11 @@
               }
             ?>
 
-            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+            <div class="text">
+              <h3> Reservar Horário </h3> <br>
+            </div>
+
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="formulario">
 
              <?php 
                     
@@ -241,14 +245,15 @@
                     if ($result->num_rows > 0) {
                       // output data of each row
                       
-                      echo "\t\t\tGrupo:<br> <select name=\"grupo\">\r\n";
-                      echo "<option value=\"\" disabled selected>Escolha o grupo</option>";
+                      echo "\t\t\t<p>Grupo:</p>\n"; 
+                      echo "\t\t\t\t <select name=\"grupo\">\r\n";
+                      echo "\t\t\t\t <option value=\"\" disabled selected>Escolha o grupo</option>\n";
                       while($row = $result->fetch_assoc()) {  
                         
                       addgrupo($row["ID"],$row["GRUPO"],$row["TURMA"]);
 
                       } 
-                      echo "\t\t\t</select>\r\n";
+                      echo "\t\t\t\t</select>\r\n";
                       
                     } else {
                       echo "0 results";
@@ -262,8 +267,9 @@
                     if ($result->num_rows > 0) {
                       // output data of each row
                       
-                      echo "\t\t\t <br>Horário:<br> <select name=\"horarios\">\r\n";
-                      echo "<option value=\"\" disabled selected>Escolha o horário</option>";
+                      echo "\t\t\t <p>Horário:</p>\n"; 
+                      echo "\t\t\t\t <select name=\"horarios\">\r\n";
+                      echo "\t\t\t\t <option value=\"\" disabled selected>Escolha o horário</option>\n";
                       while($row = $result->fetch_assoc()) {  
                         
                       addhorario($row["id"],$row["descricao"]);
@@ -276,17 +282,19 @@
                     }
 
                     $conn->close();
-                    echo"<br>Data:<br> <input type=\"date\" name=\"data\"><br>";
-                    echo "<br><input type=\"submit\" value=\"Confirmar\">";
-                    echo "<input type=\"reset\" value=\"Cancelar\">";
+                    echo "\t\t\t<p>Data:</p>\n"; 
+                    echo "\t\t\t\t <input type=\"date\" name=\"data\"><br>\n";
+                    echo "\t\t\t<br><input type=\"submit\" value=\"Confirmar\">\n";
+                    echo "\t\t\t<input type=\"reset\" value=\"Cancelar\">\n";
                     echo "</form>\r\n";
 
               ?>
 
               
 
-
-            <h3> Horários Marcados </h3> 
+            <div class="text">
+            <br>  <h3> Horários Marcados </h3> <br>
+            </div>
             <?php
                 echo "\n<div class=\"row\">\n";
                 echo "\t\t\t\t  <div class=\"column\" style=\"background-color:#aaa;\">\n";

@@ -301,6 +301,7 @@ input[type=text], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: vertical;
+  font-family: 'Lato', sans-serif;
 }
 
 input[type=button], input[type=submit], input[type=reset] {
@@ -311,6 +312,7 @@ input[type=button], input[type=submit], input[type=reset] {
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
+  font-family: 'Lato', sans-serif;
 }
 
 input[type="date"] {
@@ -320,6 +322,7 @@ input[type="date"] {
      overflow: hidden;
      padding: 12px;
      width:50%;
+     font-family: 'Lato', sans-serif;
      -webkit-padding-start: 1px;
 }
 
@@ -338,6 +341,13 @@ input::-webkit-datetime-edit-fields-wrapper {
     white-space: pre;
 }
 
+.formulario > p{
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 1px;
+  margin-top: 2px;
+  font-size: 14px;
+}
+
 /*###### CALENDAR ###### */
 * {
   box-sizing: border-box;
@@ -346,10 +356,17 @@ input::-webkit-datetime-edit-fields-wrapper {
 /* Create two equal columns that floats next to each other */
 .column {
   float: left;
-  width: 30%;
+  width: 33%;
   padding: 10px;
+
 }
 
+.column > p { /* Address, phone and e-mail */
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 1px;
+  margin-top: 2px;
+  font-size: 14px;
+}
 /* Clear floats after the columns */
 .row:after {
   content: "";
