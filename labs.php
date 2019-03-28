@@ -156,6 +156,8 @@
                 }
 
                 $conn->close();
+
+                echo "<meta HTTP-EQUIV='refresh' CONTENT='5;URL=labs.php'>";
               }
 
               function getReservas(){
