@@ -105,7 +105,20 @@
                   echo "<option value=\"" . $id_horario . "\">" . $descricao_horario . "</option>";
               }
               function showReserva($grupo,$turma,$horario,$data){
-                echo "<p> Data: " . $data . " - " . $grupo . " - " . $turma . " - " . $horario . "</p>";
+                
+              echo "\n<div class=\"row\">\n";
+              echo "\t\t\t\t  <div class=\"column\" style=\"background-color:#aaa;\">\n";
+              echo "\t\t\t\t <p> ". date('d/m/Y',strtotime($data)) ." </p>\n";
+              echo "\t\t\t\t  </div>\n";
+              echo "\t\t\t\t  <div class=\"column\" style=\"background-color:#bbb;\">\n";
+              echo "\t\t\t\t <p> " . $grupo . "</p>\n";
+              echo "\t\t\t\t  </div>\n";
+              echo "\t\t\t\t  <div class=\"column\" style=\"background-color:#ccc;\">\n";
+              echo "\t\t\t\t <p> " . $horario . "</p>\n";
+              echo "\t\t\t\t  </div>\n";
+
+              echo " </div>\n";
+
               }
 
               function pegouvalor(){
@@ -127,7 +140,6 @@
                     if ($conn->connect_error) {
                         die("Connection failed: " . $conn->connect_error);
                     }
-                    echo "<br> Connected successfully to $dbname database <br>";
                     return $conn;
               }
 
@@ -271,23 +283,26 @@
 
               ?>
 
-              <?php
-                echo "<br><br>";
-                echo $grupo;
-                echo "<br>";
-                echo $horarios;
-                echo "<br>";
-                echo $data;
-                echo "<br>";
+              
 
+
+            <h3> Horários Marcados </h3> 
+            <?php
+                echo "\n<div class=\"row\">\n";
+                echo "\t\t\t\t  <div class=\"column\" style=\"background-color:#aaa;\">\n";
+                echo "\t\t\t\t <p> DATA </p>\n";
+                echo "\t\t\t\t  </div>\n";
+                echo "\t\t\t\t  <div class=\"column\" style=\"background-color:#bbb;\">\n";
+                echo "\t\t\t\t <p> GRUPO </p>\n";
+                echo "\t\t\t\t  </div>\n";
+                 echo "\t\t\t\t  <div class=\"column\" style=\"background-color:#ccc;\">\n";
+                echo "\t\t\t\t <p> HORÁRIO </p>\n";
+                echo "\t\t\t\t  </div>\n";
+
+                echo " </div>\n";
                 getReservas();
-
-
-              ?>
-
-
-            <h3> Horários Marcados </h3>  
-            <div class="row">
+            ?> 
+            <!--<div class="row">
               <div class="column" style="background-color:#aaa;">
                 <p>SEGUNDA</p>
               </div>
@@ -322,7 +337,7 @@
                <div class="column" style="background-color:#ccc;">
                 <p>Some text..</p>
               </div>
-            </div>
+            </div>-->
 
 
     </div>
