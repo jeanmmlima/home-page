@@ -125,6 +125,10 @@
                 echo "<br><p> " . $_POST["grupo"] . "</p>";
               }
 
+              function alert($msg) {
+                echo "<script type='text/javascript'>alert('$msg');</script>";
+              }
+
               function bdConnect(){
 
                     $servername = "localhost";
@@ -147,6 +151,29 @@
                 //insert into database
 
                 $conn = bdConnect();
+                $sql = "SELECT id_horarios as HORARIO, data as DATA FROM reserva WHERE ativo = 1";
+
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                      // output data of each row
+
+                  while($row = $result->fetch_assoc()) {  
+                        
+                    if($row["HORARIO"] == $horarios && $row["DATA"] = $data){
+                      $conn->close();
+                      return alert("Para a data " . $data . " escolhida, o horário " . $horarios . " já está reservado! Por favor, escolher outro horário ou dia");
+                    }
+
+                  } 
+                      
+                } 
+                else {
+                      echo "0 results";
+                }
+
+
+
                 $sql = "INSERT INTO reserva (id_grupo,id_horarios,ativo,data) VALUES (" . $grupo . ", " . $horarios . ", 1, '" . $data . "')";
 
                 if ($conn->query($sql) === TRUE) {
