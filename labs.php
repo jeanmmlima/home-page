@@ -150,14 +150,14 @@
                 $sql = "INSERT INTO reserva (id_grupo,id_horarios,ativo,data) VALUES (" . $grupo . ", " . $horarios . ", 1, '" . $data . "')";
 
                 if ($conn->query($sql) === TRUE) {
-                    echo "<br>New record created successfully<br>";
+                   // echo "<br>New record created successfully<br>";
                 } else {
                     echo "<br>Error: " . $sql . "<br>" . $conn->error;
                 }
 
                 $conn->close();
 
-                echo "<meta HTTP-EQUIV='refresh' CONTENT='5;URL=labs.php'>";
+               // echo "<meta HTTP-EQUIV='refresh' CONTENT='5;URL=labs.php'>";
               }
 
               function getReservas(){
@@ -298,7 +298,8 @@
             <br>  <h3> Horários Marcados </h3> <br>
             </div>
             <?php
-                echo "\n<div class=\"row\">\n";
+                echo "<div class=ex1>\n";
+                echo "\t<div class=\"row\">\n";
                 echo "\t\t\t\t  <div class=\"column\" style=\"background-color:#aaa;\">\n";
                 echo "\t\t\t\t <p style=\"font-weight: bold\";> DATA </p>\n";
                 echo "\t\t\t\t  </div>\n";
@@ -309,8 +310,9 @@
                 echo "\t\t\t\t <p style=\"font-weight: bold\"> HORÁRIO </p>\n";
                 echo "\t\t\t\t  </div>\n";
 
-                echo " </div>\n";
+                echo "\t</div>\n";
                 getReservas();
+                echo "</div>\n";
             ?> 
             <!--<div class="row">
               <div class="column" style="background-color:#aaa;">
