@@ -33,6 +33,26 @@
   
   <link rel='stylesheet' type='text/css' href='css/meu_stilo.css'>
 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#dialog-confirm" ).dialog({
+      resizable: false,
+      height: "auto",
+      width: 400,
+      modal: true,
+      buttons: {
+        "OK": function() {
+          $( this ).dialog( "close" );
+        },
+      }
+    });
+  } );
+  </script>
+
 </head>
 <body>
   <nav class="navbar navbar-inverse">
@@ -125,8 +145,11 @@
                 echo "<br><p> " . $_POST["grupo"] . "</p>";
               }
 
-              function alert($msg) {
-                echo "<script type='text/javascript'>alert('$msg');</script>";
+              function alert($msg,$title) {
+                //echo "<script type='text/javascript'> alert('$msg');</script>";
+                echo "<div id=\"dialog-confirm\" title=\"" . $title . "\">
+                  <p class=textdiag><span class=\"ui-icon ui-icon-alert\" style=\"float:left; margin:12px 12px 20px 0;\"></span> " . $msg . "</p>
+                </div>";
               }
 
               function bdConnect(){
@@ -151,7 +174,7 @@
                 //insert into database
 
                 $conn = bdConnect();
-                $sql = "SELECT id_horarios as HORARIO, data as DATA FROM reserva WHERE ativo = 1";
+                $sql = "SELECT h.descricao as HORARIO, r.id_horarios as ID_HORARIO, r.data as DATA FROM reserva r inner join horarios h ON (h.id = r.id_horarios) WHERE r.ativo = 1";
 
                 $result = $conn->query($sql);
 
@@ -160,9 +183,11 @@
 
                   while($row = $result->fetch_assoc()) {  
                         
-                    if($row["HORARIO"] == $horarios && $row["DATA"] = $data){
+                    if($row["ID_HORARIO"] === $horarios && $row["DATA"] === $data){
                       $conn->close();
-                      return alert("Para a data " . $data . " escolhida, o horário " . $horarios . " já está reservado! Por favor, escolher outro horário ou dia");
+                      $msg = "Para a data " . date('d/m/Y',strtotime($data)) . " escolhida, o horário " . $row["HORARIO"] . " já está reservado! Por favor, escolher outro horário ou dia!";
+                      $title = "Não foi possível cadastrar horário!";
+                      return alert($msg,$title);
                     }
 
                   } 
