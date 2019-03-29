@@ -37,21 +37,7 @@
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#dialog-confirm" ).dialog({
-      resizable: false,
-      height: "auto",
-      width: 400,
-      modal: true,
-      buttons: {
-        "OK": function() {
-          $( this ).dialog( "close" );
-        },
-      }
-    });
-  } );
-  </script>
+  <script src="js/jquery_scripts.js"> </script>
 
 </head>
 <body>
