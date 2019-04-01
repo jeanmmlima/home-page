@@ -38,6 +38,7 @@
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="js/jquery_scripts.js"> </script>
+  <script src="js/validations.js"> </script>
 
 </head>
 <body>
@@ -286,8 +287,9 @@
                       // output data of each row
                       
                       echo "\t\t\t<p>Grupo:</p>\n"; 
-                      echo "\t\t\t\t <select name=\"grupo\">\r\n";
-                      echo "\t\t\t\t <option value=\"\" disabled selected>Escolha o grupo</option>\n";
+                      echo "\t\t\t<p id=\"demo\"></p>\n";
+                      echo "\t\t\t\t <select id=\"group\" name=\"grupo\" required oninvalid=\"this.setCustomValidity('Informe o Grupo')\" onchange=\"try{setCustomValidity('')}catch(e){}\" >\r\n";
+                      echo "\t\t\t\t <option value=\"0\" disabled selected>Escolha o grupo</option>\n";
                       while($row = $result->fetch_assoc()) {  
                         
                       addgrupo($row["ID"],$row["GRUPO"],$row["TURMA"]);
@@ -308,7 +310,7 @@
                       // output data of each row
                       
                       echo "\t\t\t <p>Horário:</p>\n"; 
-                      echo "\t\t\t\t <select name=\"horarios\">\r\n";
+                      echo "\t\t\t\t <select name=\"horarios\" required oninvalid=\"this.setCustomValidity('Informe o Horário')\" onchange=\"try{setCustomValidity('')}catch(e){}\" >\r\n";
                       echo "\t\t\t\t <option value=\"\" disabled selected>Escolha o horário</option>\n";
                       while($row = $result->fetch_assoc()) {  
                         
@@ -323,8 +325,8 @@
 
                     $conn->close();
                     echo "\t\t\t<p>Data:</p>\n"; 
-                    echo "\t\t\t\t <input type=\"date\" name=\"data\"><br>\n";
-                    echo "\t\t\t<br><input type=\"submit\" value=\"Confirmar\">\n";
+                    echo "\t\t\t\t <input type=\"date\" name=\"data\" required oninvalid=\"this.setCustomValidity('Informe o Data')\" onchange=\"try{setCustomValidity('')}catch(e){}\"><br>\n";
+                    echo "\t\t\t<br><input type=\"submit\" value=\"Confirmar\" onclick=\"validator()\">\n";
                     echo "\t\t\t<input type=\"reset\" value=\"Cancelar\">\n";
                     echo "</form>\r\n";
 
