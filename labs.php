@@ -132,10 +132,17 @@
                 echo "<br><p> " . $_POST["grupo"] . "</p>";
               }
 
-              function alert($msg,$title) {
+              function alerta($msg,$title) {
                 //echo "<script type='text/javascript'> alert('$msg');</script>";
                 echo "<div id=\"dialog-confirm\" title=\"" . $title . "\">
                   <p class=textdiag><span class=\"ui-icon ui-icon-alert\" style=\"float:left; margin:12px 12px 20px 0;\"></span> " . $msg . "</p>
+                </div>";
+              }
+
+              function confirmar($msg,$title) {
+                //echo "<script type='text/javascript'> alert('$msg');</script>";
+                echo "<div id=\"dialog-confirm\" title=\"" . $title . "\">
+                  <p class=textdiag><span class=\"ui-icon ui-icon-check\" style=\"float:left; margin:12px 12px 20px 0;\"></span> " . $msg . "</p>
                 </div>";
               }
 
@@ -174,7 +181,7 @@
                       $conn->close();
                       $msg = "Para a data " . date('d/m/Y',strtotime($data)) . " escolhida, o horário " . $row["HORARIO"] . " já está reservado! Por favor, escolher outro horário ou dia!";
                       $title = "Não foi possível cadastrar horário!";
-                      return alert($msg,$title);
+                      return alerta($msg,$title);
                     }
 
                   } 
@@ -190,11 +197,14 @@
 
                 if ($conn->query($sql) === TRUE) {
                    // echo "<br>New record created successfully<br>";
+                  $conn->close();
+                  $title = "Horário reservado com sucesso!";
+                  $msg = "O horário foi reservado para a data escolhida! ";
+                  confirmar($msg,$title);
                 } else {
                     echo "<br>Error: " . $sql . "<br>" . $conn->error;
+                    $conn->close();
                 }
-
-                $conn->close();
 
                // echo "<meta HTTP-EQUIV='refresh' CONTENT='5;URL=labs.php'>";
               }
