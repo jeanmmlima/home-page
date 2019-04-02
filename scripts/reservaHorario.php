@@ -25,6 +25,10 @@
 
               }
 
+              function getDay(){
+                return date("Y-m-d");
+              }
+
               function pegouvalor(){
                 echo "<br><p> " . $_POST["grupo"] . "</p>";
               }
@@ -111,7 +115,8 @@
 
                     $conn->close();
                     echo "\t\t\t<p id=\"l_data\">Data:</p>\n"; 
-                    echo "\t\t\t\t <input id=\"data\" type=\"date\" name=\"data\" required oninvalid=\"this.setCustomValidity('Informe o Data')\" onchange=\"try{setCustomValidity('')}catch(e){}\"><br>\n";
+                    $diaatual = getDay();
+                    echo "\t\t\t\t <input id=\"data\" type=\"date\" name=\"data\" required oninvalid=\"this.setCustomValidity('Informe o Data')\" onchange=\"try{setCustomValidity('')}catch(e){}\" min=\"".$diaatual."\"><br>\n";
                     echo "\t\t\t<br><input type=\"submit\" value=\"Confirmar\" onclick=\"validator('group','hour','data')\">\n";
                     echo "\t\t\t<input type=\"reset\" value=\"Cancelar\">\n";
               }
