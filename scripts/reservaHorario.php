@@ -29,6 +29,10 @@
                 return date("Y-m-d");
               }
 
+              function getLastDayOfM(){
+                return date("Y-m-t");
+              }
+
               function pegouvalor(){
                 echo "<br><p> " . $_POST["grupo"] . "</p>";
               }
@@ -116,7 +120,8 @@
                     $conn->close();
                     echo "\t\t\t<p id=\"l_data\">Data:</p>\n"; 
                     $diaatual = getDay();
-                    echo "\t\t\t\t <input id=\"data\" type=\"date\" name=\"data\" required oninvalid=\"this.setCustomValidity('Informe o Data')\" onchange=\"try{setCustomValidity('')}catch(e){}\" min=\"".$diaatual."\"><br>\n";
+                    $ultimodia = date('Y-m-d', strtotime('+30 days', strtotime($diaatual)));
+                    echo "\t\t\t\t <input id=\"data\" type=\"date\" name=\"data\" required oninvalid=\"this.setCustomValidity('Informe o Data')\" onchange=\"try{setCustomValidity('')}catch(e){}\" min=\"".$diaatual."\" max=\"".$ultimodia."\"><br>\n";
                     echo "\t\t\t<br><input type=\"submit\" value=\"Confirmar\" onclick=\"validator('group','hour','data')\">\n";
                     echo "\t\t\t<input type=\"reset\" value=\"Cancelar\">\n";
               }
