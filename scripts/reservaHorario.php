@@ -175,7 +175,7 @@
 
                 $conn = bdConnect();
 
-                $sql = "SELECT g.descricao AS GRUPO, t.descricao as TURMA, h.descricao as HORARIO, r.data as DATA from reserva r inner join grupo g on (r.id_grupo = g.id) inner join horarios h on (r.id_horarios = h.id) inner join turma t on (g.id_turma = t.id) order by data asc, HORARIO asc";
+                $sql = "SELECT g.descricao AS GRUPO, t.descricao as TURMA, h.descricao as HORARIO, r.data as DATA from reserva r inner join grupo g on (r.id_grupo = g.id) inner join horarios h on (r.id_horarios = h.id) inner join turma t on (g.id_turma = t.id) WHERE r.ativo = 1 order by data asc, HORARIO asc";
 
                 $result = $conn->query($sql);
                     
