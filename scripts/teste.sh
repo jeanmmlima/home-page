@@ -5,7 +5,6 @@
 user="user"
 senha="#Senha123#"
 db="teste"
-#sql="select * from reserva"
 sql="UPDATE reserva SET ativo = 0 WHERE data < CURDATE()"
 
-/usr/bin/mysql -u $user -p$senha -D $db -e "$sql"
+/bin/echo $sql > /home/jean/public_html/html/home-page/scripts/text.txt
