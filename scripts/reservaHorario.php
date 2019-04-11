@@ -195,7 +195,7 @@
                       
                 } 
                 else {
-                      echo "0 results";
+                      echo "Nenhuma reserva cadastrada";
                 }
 
               }
