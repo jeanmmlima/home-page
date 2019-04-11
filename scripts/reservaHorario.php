@@ -130,7 +130,7 @@
                 //insert into database
 
                 $conn = bdConnect();
-                $sql = "SELECT h.descricao as HORARIO, r.id_horarios as ID_HORARIO, r.data as DATA FROM reserva r inner join horarios h ON (h.id = r.id_horarios) WHERE r.ativo = 1";
+                $sql = "SELECT h.descricao as HORARIO, g.id_bancada as ID_BANCADA, r.id_horarios as ID_HORARIO, r.data as DATA FROM reserva r inner join horarios h ON (h.id = r.id_horarios) inner join grupo g ON (g.id =r.id_grupo) WHERE r.ativo = 1";
 
                 $result = $conn->query($sql);
 
@@ -138,8 +138,12 @@
                       // output data of each row
 
                   while($row = $result->fetch_assoc()) {  
+
+                    $sql2 = "SELECT id_bancada as ID_BANCADA from grupo where id = $grupo";
+                    $result2 = $conn->query($sql2);
+                    $bancada = $result2->fetch_assoc();
                         
-                    if($row["ID_HORARIO"] === $horarios && $row["DATA"] === $data){
+                    if($row["ID_HORARIO"] === $horarios && $row["DATA"] === $data && $row["ID_BANCADA"] === $bancada["ID_BANCADA"]){
                       $conn->close();
                       $msg = "Para a data " . date('d/m/Y',strtotime($data)) . " escolhida, o horário " . $row["HORARIO"] . " já está reservado! Por favor, escolher outro horário ou dia!";
                       $title = "Não foi possível cadastrar horário!";
