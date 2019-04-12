@@ -195,7 +195,9 @@
                       
                 } 
                 else {
-                      echo "Nenhuma reserva cadastrada";
+                      echo "\t\t\t<div class=\"text\"><br>\n";
+                      echo "\t\t\t\t<h4> Nenhum horário marcado </h4> <br>\n";
+                      echo "\t\t\t</div>\n";
                 }
 
               }
