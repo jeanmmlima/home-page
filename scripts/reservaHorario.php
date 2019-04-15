@@ -133,6 +133,10 @@
                   $msg = "Na sexta-feira, apenas os horários M56 e T12 podem ser reservados. Por favor, escolher outro horário ou dia!";
                   $title = "Não foi possível cadastrar horário!";
                   return alerta($msg,$title);
+                } elseif(((date('l',strtotime($data)) === 'Monday') || (date('l',strtotime($data)) === 'Wednesday')) && ($horarios === '2') ){
+                  $msg = "Nas segundas e quartas, o horários M56 é reservado para aula. Por favor, escolher outro horário ou dia!";
+                  $title = "Não foi possível cadastrar horário!";
+                  return alerta($msg,$title);
                 }
 
                 $conn = bdConnect();
