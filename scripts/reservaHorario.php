@@ -129,6 +129,12 @@
               function insertReserva($grupo,$horarios,$data){
                 //insert into database
 
+                if((date('l',strtotime($data)) === 'Friday') && ($horarios === '1' || $horarios === '4')){
+                  $msg = "Na sexta-feira, apenas os horários M56 e T12 podem ser reservados. Por favor, escolher outro horário ou dia!";
+                  $title = "Não foi possível cadastrar horário!";
+                  return alerta($msg,$title);
+                }
+
                 $conn = bdConnect();
                 $sql = "SELECT b.descricao as BANCADA, h.descricao as HORARIO, g.id_bancada as ID_BANCADA, r.id_horarios as ID_HORARIO, r.data as DATA FROM reserva r inner join horarios h ON (h.id = r.id_horarios) inner join grupo g ON (g.id =r.id_grupo) inner join bancada b ON (b.id = g.id_bancada) WHERE r.ativo = 1";
 
@@ -219,7 +225,9 @@
                 getReservas();
                 echo "</div>\n";
               }
+              //Códigos Turmas
 
+              
 
 
 ?>
